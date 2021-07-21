@@ -16,10 +16,23 @@ url = "https://www.kxan.com"
 page = urlopen(url)
 
 html_bytes = page.read()
-html = html_bytes.decode("utf-8")
+html = html_bytes.decode("UTF-8")
 
-parsed_html = BeautifulSoup(html)
-print(parsed_html)
+ATXtempTag = html.find('<span class="site-header__weather-forecast__text">')
+
+ATXtempStartIndex = ATXtempTag + len('<span class="site-header__weather-forecast__text">')
+ATXtempEndIndex = ATXtempStartIndex + 10
+
+
+#ATXtemp= html.find('<span class="site-header__weather-forecast__text">')
+
+weatherregion = html.find('<span class="site-header__weather-region">')
+
+ATXtemp = html[ATXtempStartIndex:ATXtempEndIndex]
+
+print(ATXtemp)
+#print(weatherregion)
+#print(html)
 
 #tempscrape = html.find("site-header__weather-forecast__text")
 
