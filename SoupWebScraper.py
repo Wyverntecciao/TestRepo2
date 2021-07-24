@@ -1,3 +1,6 @@
+import sys
+print(sys.version)
+
 from bs4 import BeautifulSoup
 from urllib.request import urlopen
 
