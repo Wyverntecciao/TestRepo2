@@ -9,4 +9,6 @@ page = urlopen(url)
 html = page.read().decode("utf-8")
 soup = BeautifulSoup(html, "html.parser")
 
-print(soup.gettext())
+#print(soup.get_text())
+
+
