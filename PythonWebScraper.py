@@ -3,13 +3,6 @@ print ("Starting"); #starting message
 #url open library
 from urllib.request import urlopen 
 
-#import BeautifulSoup for html parsing
-# try: 
-#     from BeautifulSoup.request import BeautifulSoup
-# except ImportError:
-#     from bs4 import BeautifulSoup
-
-#need to install beautifulsoup or another package to parse HTML
 
 #setting how to open page
 url = "https://www.kxan.com"
