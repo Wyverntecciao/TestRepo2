@@ -30,10 +30,19 @@ weatherregion = html.find('<span class="site-header__weather-region">')
 
 ATXtemp = html[ATXtempStartIndex:ATXtempEndIndex]
 
-print(ATXtemp)
+tnonly = ATXtemp.split('&')
+
+tempunits = " DEGREES F"
+
+temptext = [tnonly[0],tempunits]
+
+print(''.join(temptext))
+#print(tnonly[0].join(tempunits))
 #print(weatherregion)
 #print(html)
 
 #tempscrape = html.find("site-header__weather-forecast__text")
 
 #print(tempscrape)
+
+
